@@ -1,0 +1,16 @@
+.footer {
+ text-align: center;
+ margin-bottom: 24px;
+
+ a {
+  text-decoration: none;
+
+  &:hover {
+   text-decoration: underline;
+  }
+
+  &:visited {
+   color: #e53e3e;
+  }
+ }
+}
