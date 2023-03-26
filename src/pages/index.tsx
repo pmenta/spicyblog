@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { useEffect } from "react";
 import { useInfiniteQuery } from "react-query";
 import { Footer } from "../components/Footer";
@@ -55,9 +55,10 @@ export default function Home({ posts }: IHomeProps) {
   return (
     <>
       <div className={styles.container}>
-        <Head>
-          <title>spicyblog - home</title>
-        </Head>
+        <NextSeo
+          title="spicyblog"
+          description="Conteúdos sobre tecnologia escritos por João Martins"
+        />
         <Header />
         <main className={styles.content}>
           {isSuccess && data.pages.map((page) => page.map((post: IPost) => (
